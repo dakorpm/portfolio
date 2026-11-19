@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20292a">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Dr. David Kormos — law-qualified professional specialising in privacy, data governance, regulatory implementation and international business operations.">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Dr. David Kormos — Law, Privacy & Data Governance">
+  <meta property="og:description" content="Professional profile spanning legal analysis, privacy and data governance, risk, and practical organisational experience.">
+  <title>Dr. David Kormos — Law, Privacy & Data Governance</title>
+  <style>
+    :root {
+      --night:#1b2324;
+      --night2:#273132;
+      --night3:#313a3b;
+      --ink:#222b2d;
+      --muted:#52605e;
+      --muted-on-dark:#aebdb8;
+      --paper:#d9d5cd;
+      --stone:#d1cec6;
+      --stone-light:#e2ded6;
+      --sage:#b7c7bd;
+      --steel:#bdc8cc;
+      --lilac:#c6bfc9;
+      --hairline:rgba(34,43,45,.24);
+      --hairline-dark:rgba(223,233,226,.22);
+      --serif:"Iowan Old Style","Baskerville","Palatino Linotype","Book Antiqua",Georgia,serif;
+      --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+      --page:1240px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:95px}
+    body{margin:0;min-width:320px;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit}
+    button,a,summary{outline-offset:5px}
+    :focus-visible{outline:2px solid #78958d}
+    ::selection{background:var(--sage);color:var(--night)}
+    .shell{width:min(var(--page),calc(100% - 112px));margin-inline:auto}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .skip{position:absolute;left:18px;top:-70px;z-index:100;padding:12px 16px;background:var(--stone-light);color:var(--ink)}
+    .skip:focus{top:10px}
+    .caps{font-size:10px;letter-spacing:.23em;text-transform:uppercase;font-weight:650;line-height:1.7}
+    .muted{color:var(--muted)}
+    .serif{font-family:var(--serif)}
+    .section{padding:116px 0 124px}
+    .section-head{display:grid;grid-template-columns:minmax(185px,.32fr) minmax(0,1fr);gap:32px;margin-bottom:62px}
+    .section-index{display:flex;align-items:start;gap:17px;padding-top:15px}
+    .section-index .slash{font-family:var(--serif);font-size:24px;line-height:.6;font-weight:normal;opacity:.65}
+    .section-index .caps{max-width:200px}
+    .section-title{margin:0;font:400 clamp(49px,5.8vw,84px)/1.06 var(--serif);letter-spacing:-.045em;max-width:870px}
+    .section-intro{font:400 17px/1.9 var(--sans);max-width:720px;margin:23px 0 0;color:var(--muted)}
+    .hairline{border-top:1px solid var(--hairline)}
+    .text-link{display:inline-flex;align-items:center;gap:16px;border-bottom:1px solid currentColor;padding:0 0 9px;font-size:12px;letter-spacing:.04em;font-weight:600;transition:gap .2s ease}
+    .text-link:hover{gap:23px}
+    .text-link .arr{font-size:17px;font-weight:400}
+
+    /* The header is closer to a publication masthead than a marketing navbar. */
+    .site-header{background:var(--night);color:#e1e5df;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--hairline-dark)}
+    .nav-inner{height:91px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;gap:18px;align-items:center;min-width:240px}
+    .brand-monogram{font:400 29px/.9 var(--serif);letter-spacing:-.12em;white-space:nowrap;color:var(--sage);padding:0 9px 2px 0;border-right:1px solid var(--hairline-dark)}
+    .brand-name{display:block;font-family:var(--serif);font-size:18px;letter-spacing:.008em;line-height:1.1}
+    .brand-caption{display:block;font:500 9px/1.5 var(--sans);text-transform:uppercase;letter-spacing:.18em;color:#adbbb6;margin-top:6px}
+    .main-nav{display:flex;gap:28px;align-items:center}
+    .main-nav a{font-size:12px;font-weight:500;letter-spacing:.02em;color:#d8dfd9;transition:color .2s ease;white-space:nowrap}
+    .main-nav a:hover,.main-nav a:focus-visible{color:var(--sage)}
+    .main-nav a.nav-contact{color:var(--sage);border-bottom:1px solid rgba(183,199,189,.75);padding-bottom:7px}
+    .menu-toggle{display:none;align-items:center;gap:12px;background:none;border:1px solid var(--hairline-dark);padding:11px 13px;cursor:pointer;color:#e1e5df;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .menu-lines,.menu-lines::before,.menu-lines::after{width:17px;height:1px;display:block;background:currentColor;content:""}
+    .menu-lines{position:relative}.menu-lines::before{position:absolute;top:-5px}.menu-lines::after{position:absolute;top:5px}
+
+    /* Hero / dark ink + muted pastel, without gradients or glossy cards. */
+    .hero{background:var(--night);color:#eceee8;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);min-height:688px}
+    .hero-main{padding:99px 70px 77px max(56px,calc((100vw - var(--page))/2));display:flex;flex-direction:column;justify-content:space-between}
+    .hero-overline{display:flex;gap:16px;align-items:center;color:var(--sage)}
+    .hero-overline:before{content:"";height:1px;width:40px;background:var(--sage)}
+    h1{font:400 clamp(76px,7.7vw,137px)/.9 var(--serif);letter-spacing:-.072em;margin:20px 0 26px;max-width:840px}
+    h1 span{display:block}h1 em{color:var(--sage);font-style:italic;font-weight:400}
+    .hero-profession{font:400 clamp(20px,2vw,29px)/1.35 var(--serif);letter-spacing:-.012em;margin:0 0 24px;color:#dddeda}
+    .hero-description{max-width:580px;font-size:15px;line-height:1.95;color:#b8c7c0;margin:0}
+    .hero-foot{display:flex;align-items:center;gap:35px;margin-top:43px;flex-wrap:wrap}
+    .hero-foot .text-link{color:#e6ece6}
+    .hero-meta{color:#a5b5ad;font-size:11px;letter-spacing:.035em}
+    .hero-pane{background:var(--sage);color:var(--night);display:flex;flex-direction:column;justify-content:space-between;position:relative;padding:42px clamp(28px,3.8vw,75px) 42px 46px;overflow:hidden}
+    .hero-pane:before{content:"";position:absolute;inset:22px;border:1px solid rgba(29,42,40,.25);pointer-events:none}
+    .pane-top,.pane-bottom{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .pane-top{font-size:9px;font-weight:650;letter-spacing:.2em;text-transform:uppercase}
+    .pane-middle{position:relative;padding:40px 0 0;z-index:1;text-align:center}
+    .large-initials{font:400 clamp(122px,15vw,256px)/.9 var(--serif);letter-spacing:-.17em;padding-right:.2em;color:#23302d;opacity:.9}
+    .pane-rule{width:64px;height:1px;background:var(--night);margin:37px auto}
+    .pane-quote{font:italic 400 clamp(24px,2.4vw,40px)/1.2 var(--serif);letter-spacing:-.025em;max-width:300px;margin:0 auto}
+    .pane-bottom{font:500 10px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+    .pane-bottom span:last-child{text-align:right}
+
+    /* Professional profile */
+    .profile{background:var(--stone-light)}
+    .profile-grid{display:grid;grid-template-columns:.64fr 1fr;gap:12%;align-items:start;border-top:1px solid var(--hairline);padding-top:36px}
+    .profile-aside{padding-top:9px}
+    .profile-aside p{font:italic 400 clamp(27px,3vw,42px)/1.32 var(--serif);margin:0;letter-spacing:-.03em;max-width:380px}
+    .profile-body p{font-size:16px;line-height:2;color:#384443;margin:0 0 20px;max-width:690px}
+    .profile-body p:last-child{margin-bottom:0}
+    .profile-lines{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:57px;border-top:1px solid var(--hairline);padding-top:22px}
+    .profile-lines span{font-size:11px;line-height:1.7;font-weight:500;color:#52615d;letter-spacing:.025em}
+    .profile-lines strong{font:400 25px/1.2 var(--serif);color:var(--ink);display:block;margin-bottom:9px}
+
+    /* Expertise — typographic ledger, not marketing tiles */
+    .expertise{background:var(--night2);color:#e8eae4}
+    .expertise .section-index,.expertise .section-intro{color:#b9c7c0}
+    .expertise-ledger{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:75px}
+    .expertise-item{display:grid;grid-template-columns:52px 1fr;gap:16px;border-top:1px solid var(--hairline-dark);padding:31px 0 38px}
+    .expertise-num{font:italic 400 19px/1.45 var(--serif);color:var(--sage)}
+    .expertise-item h3{font:400 clamp(23px,2.3vw,33px)/1.2 var(--serif);margin:0 0 14px;letter-spacing:-.02em}
+    .expertise-item p{font-size:13px;line-height:1.85;color:#b2c1bb;max-width:410px;margin:0}
+
+    /* Career list intentionally has no dates or durations. */
+    .career{background:var(--stone)}
+    .career-list{border-top:1px solid var(--hairline)}
+    .career-row{display:grid;grid-template-columns:.29fr .52fr 1fr;gap:28px;padding:30px 0 34px;border-bottom:1px solid var(--hairline)}
+    .career-org{font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;padding-top:6px}
+    .career-role{font:400 clamp(23px,2.25vw,31px)/1.25 var(--serif);letter-spacing:-.025em;margin:0}
+    .career-desc{font-size:13px;line-height:1.9;color:#52605e;margin:0;padding-top:3px}
+    .career-ending{display:flex;justify-content:space-between;align-items:end;gap:40px;padding-top:37px}
+    .education-copy{max-width:660px;color:#4a5653;font-size:13px;line-height:1.9;margin:8px 0 0}
+    /* Education distinguishes completed qualifications from ongoing and other postgraduate studies. */
+    .education-area{max-width:620px;width:100%}
+    .education-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:19px}
+    .education-item{border-top:1px solid var(--hairline);padding-top:17px}
+    .education-item h3{margin:0 0 10px;font:400 29px/1.2 var(--serif);letter-spacing:-.025em}
+    .education-degree{margin:0;color:var(--ink);font-size:13px;line-height:1.6;font-weight:600}
+    .education-degree span{color:#56625f;font-weight:400;white-space:nowrap}
+    .education-item .education-copy{margin-top:9px;font-size:12px;line-height:1.85}
+    .education-notes{margin:19px 0 0;font-size:12px;line-height:1.8;color:#52605e}
+    .print-link{border:0;border-bottom:1px solid currentColor;padding:0 0 8px;background:transparent;cursor:pointer;white-space:nowrap}
+
+    /* Point of view: personal, measured, and non-promotional */
+    .perspective{background:var(--night);color:#e6e9e2;padding:104px 0 114px}
+    .perspective-grid{display:grid;grid-template-columns:.35fr 1fr;gap:70px}
+    .perspective-index{color:var(--sage);padding-top:10px}
+    .perspective-quote{font:400 clamp(38px,4.7vw,66px)/1.23 var(--serif);letter-spacing:-.037em;max-width:890px;margin:0 0 40px}
+    .perspective-quote em{font-style:italic;color:var(--sage)}
+    .perspective-desc{max-width:660px;color:#b7c5be;font-size:14px;line-height:1.95;margin:0}
+
+    /* Consulting remains an interest/point of contact, not a sales funnel. */
+    .advisory{background:var(--sage)}
+    .advisory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;border-top:1px solid var(--hairline);padding-top:27px}
+    .advisory-item{padding-right:12px}
+    .advisory-item:not(:last-child){border-right:1px solid var(--hairline);padding-right:33px}
+    .advisory-item .caps{color:#576c63}
+    .advisory-item h3{font:400 clamp(25px,2.5vw,34px)/1.22 var(--serif);letter-spacing:-.02em;margin:23px 0 17px}
+    .advisory-item p{font-size:13px;line-height:1.95;color:#42534c;margin:0}
+    .advisory-foot{border-top:1px solid var(--hairline);margin-top:50px;padding-top:22px;display:flex;gap:25px;align-items:start;justify-content:space-between}
+    .advisory-foot p{max-width:780px;font-size:11px;line-height:1.9;color:#4c5e54;margin:0}
+
+
+    /* Continuing education uses the same editorial ledger as the experience section. */
+    .development{background:var(--paper)}
+    .development-ledger{border-top:1px solid var(--hairline)}
+    .development-group{display:grid;grid-template-columns:minmax(180px,.31fr) minmax(0,1fr);gap:35px;padding:29px 0 35px;border-bottom:1px solid var(--hairline)}
+    .development-category{padding-top:10px;color:#4f5c58}
+    .development-record{display:grid;grid-template-columns:minmax(150px,.36fr) minmax(0,1fr);gap:24px;padding:20px 0}
+    .development-record:first-child{padding-top:0}
+    .development-record:last-child{padding-bottom:0}
+    .development-record + .development-record{border-top:1px solid rgba(34,43,45,.14)}
+    .development-record h3{font:400 clamp(21px,2vw,27px)/1.22 var(--serif);letter-spacing:-.018em;margin:0}
+    .development-record ul{list-style:none;padding:0;margin:0}
+    .development-record li{font-size:13px;line-height:1.7;color:#43514d}
+    .development-record li + li{margin-top:10px}
+    .development-description{font-size:13px;line-height:1.7;color:#43514d;margin:0}
+    .development-status{display:inline-block;color:#4e6256;font-size:11px;font-weight:600;letter-spacing:.04em;margin-top:12px;border-top:1px solid rgba(34,43,45,.3);padding-top:8px}
+
+    /* Contact is intentionally direct; no non-functional lead form. */
+    .contact{background:var(--night2);color:#eff0e9;padding:114px 0 95px}
+    .contact-grid{display:grid;grid-template-columns:.31fr 1fr;gap:65px}
+    .contact .section-index{color:var(--sage)}
+    .contact-title{font:400 clamp(47px,6vw,83px)/1.1 var(--serif);max-width:850px;letter-spacing:-.045em;margin:0 0 25px}
+    .contact-text{color:#b8c6bf;max-width:560px;font-size:15px;line-height:1.95;margin:0 0 34px}
+    .contact .text-link{color:#e7ece5;font-size:13px}
+    .contact-secondary{margin-top:31px;font-size:11px;line-height:1.8;color:#9caea5}
+    .footer{background:#192122;color:#aebbb4;border-top:1px solid var(--hairline-dark);padding:25px 0 31px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+    .footer-name{color:#dfe7dd;font:400 20px/1.2 var(--serif)}
+    .footer-copy{font-size:10px;line-height:1.8;letter-spacing:.02em}
+    .footer a{font-size:11px;border-bottom:1px solid #65766e;padding-bottom:4px}
+
+    @media(max-width:1150px){
+      .shell{width:calc(100% - 76px)}
+      .hero-main{padding-left:38px;padding-right:39px}
+      .hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(310px,.9fr)}
+      h1{font-size:clamp(70px,8vw,104px)}
+      .main-nav{gap:18px}
+      .main-nav a{font-size:11px}
+    }
+    @media(max-width:860px){
+      .shell{width:calc(100% - 56px)}
+      .nav-inner{height:74px}
+      .menu-toggle{display:flex}
+      .main-nav{display:none;position:absolute;top:74px;left:0;right:0;background:var(--night);border-bottom:1px solid var(--hairline-dark);padding:12px 28px 28px;flex-direction:column;align-items:stretch;gap:0}
+      .main-nav.open{display:flex}
+      .main-nav a{padding:15px 0;border-bottom:1px solid var(--hairline-dark);font-size:13px}
+      .main-nav a.nav-contact{padding:15px 0;border-bottom:1px solid var(--hairline-dark)}
+      .hero-grid{grid-template-columns:1fr;min-height:auto}
+      .hero-main{padding:82px 28px 70px}
+      h1{font-size:clamp(70px,10.4vw,118px)}
+      .hero-pane{min-height:355px;padding:31px 40px}
+      .hero-pane:before{inset:18px}
+      .pane-middle{padding:4px 0 0;display:flex;align-items:center;gap:36px;justify-content:center}
+      .large-initials{font-size:150px}
+      .pane-rule{display:none}
+      .pane-quote{font-size:27px;margin:0;text-align:left;max-width:220px}
+      .section{padding:88px 0 96px}
+      .section-head{grid-template-columns:1fr;gap:20px;margin-bottom:45px}
+      .section-index{padding-top:0}
+      .profile-grid{grid-template-columns:1fr;gap:30px}
+      .profile-aside p{max-width:620px}
+      .profile-lines{gap:18px}
+      .expertise-ledger{column-gap:38px}
+      .career-row{grid-template-columns:.35fr 1fr;gap:9px 30px}
+      .career-desc{grid-column:2}
+      .perspective-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
+
+      .development-group{grid-template-columns:1fr;gap:20px}
+      .development-category{padding-top:0}
+      .advisory-grid{gap:22px}
+      .advisory-item:not(:last-child){padding-right:18px}
+    }
+    @media(max-width:370px){
+      .nav-inner{gap:12px}
+      .brand-name{font-size:14px}
+      .brand-caption{font-size:7px;letter-spacing:.08em}
+      .menu-toggle{padding:10px}
+      .menu-toggle span:first-child{display:none}
+    }
+    @media(max-width:610px){
+      .shell{width:calc(100% - 42px)}
+      .brand{min-width:0;gap:12px}
+      .brand-monogram{font-size:24px}
+      .brand-name{font-size:16px}
+      .brand-caption{font-size:8px;letter-spacing:.13em}
+      .menu-toggle{padding:11px}
+      .hero-main{padding:65px 22px 65px}
+      h1{font-size:clamp(63px,14.1vw,94px);margin:51px 0 24px}
+      .hero-profession{font-size:22px}
+      .hero-description{font-size:14px;line-height:1.9}
+      .hero-foot{gap:25px}
+      .hero-meta{font-size:10px}
+      .hero-pane{min-height:317px;padding:32px 35px}
+      .pane-middle{gap:17px}
+      .large-initials{font-size:114px}
+      .pane-quote{font-size:23px}
+      .pane-bottom{font-size:9px}
+      .section{padding:75px 0 81px}
+      .section-title{font-size:clamp(43px,12vw,65px)}
+      .section-intro{font-size:15px;line-height:1.8}
+      .profile-body p{font-size:14px;line-height:1.95}
+      .profile-lines{grid-template-columns:1fr;gap:14px;margin-top:37px}
+      .profile-lines span{border-bottom:1px solid var(--hairline);padding-bottom:15px}
+      .profile-lines strong{font-size:23px}
+      .expertise-ledger{grid-template-columns:1fr}
+      .expertise-item{padding:25px 0 28px}
+      .career-row{grid-template-columns:1fr;gap:10px;padding:23px 0 27px}
+      .career-desc{grid-column:1}
+      .career-org{padding:0}
+      .career-role{font-size:28px}
+      .career-ending{display:block}
+      .education-grid{grid-template-columns:1fr;gap:24px}
+      .education-item h3{font-size:27px}
+      .print-link{margin-top:24px}
+      .perspective{padding:80px 0 86px}
+      .perspective-quote{font-size:clamp(38px,10vw,55px)}
+      .development-record{grid-template-columns:1fr;gap:8px;padding:18px 0}
+      .development-record h3{font-size:24px}
+      .advisory-grid{grid-template-columns:1fr;gap:0}
+      .advisory-item,.advisory-item:not(:last-child){border-right:0;border-bottom:1px solid var(--hairline);padding:22px 0}
+      .advisory-item:first-child{padding-top:5px}
+      .advisory-item h3{margin:10px 0 10px;font-size:29px}
+      .advisory-foot{margin-top:26px}
+      .contact{padding:80px 0 84px}
+      .contact-title{font-size:clamp(46px,12vw,64px)}
+      .footer-inner{flex-direction:column;align-items:start;gap:16px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.text-link{transition:none}}
+    @media print{
+      @page{margin:17mm}
+      body{background:#fff!important;color:#111!important;font-size:11pt}
+      .site-header,.hero-pane,.menu-toggle,.hero-foot,.print-link,.contact,.footer,.perspective,.advisory-foot{display:none!important}
+      .hero,.expertise,.career,.profile,.advisory{background:#fff!important;color:#111!important}
+      .hero-grid{display:block;min-height:auto}.hero-main{padding:0 0 18px}h1{font-size:43pt;margin:15px 0}h1 em{color:#111}
+      .hero-description,.hero-profession,.section-intro,.profile-body p,.expertise-item p,.career-desc,.advisory-item p{color:#333!important}
+      .section{padding:16px 0 18px}.section-head{margin-bottom:18px;gap:10px}.section-title{font-size:27pt}
+      .shell{width:100%}.expertise-item{break-inside:avoid}.career-row{break-inside:avoid}
+      .expertise-ledger{column-gap:22px}.expertise-item{border-color:#aaa}.expertise-item h3,.expertise-num{color:#111}
+      .advisory-grid{break-inside:avoid}
+      .education-item,.development-record,.development-group{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top" aria-label="Dr. David Kormos, back to top">
+        <span class="brand-monogram" aria-hidden="true">DK</span>
+        <span><span class="brand-name">Dr. David Kormos</span><span class="brand-caption">Law · Privacy · Governance</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+      <nav class="main-nav" id="siteNav" aria-label="Main navigation">
+        <a href="#profile">Profile</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#advisory">Collaboration</a>
+        <a href="#contact" class="nav-contact">Contact &nbsp; ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-grid">
+        <div class="hero-main">
+          <div>
+            <h1 id="heroTitle"><span>Dr. David</span><span><em>Kormos</em></span></h1>
+            <p class="hero-profession">Legal perspective. Operational judgment.</p>
+            <p class="hero-description">A law-qualified privacy and data governance professional with experience across international organisations and complex operating environments. I work at the intersection of regulatory obligations, organisational governance and practical implementation.</p>
+          </div>
+          <div class="hero-foot">
+            <a class="text-link" href="#profile">Read my profile <span class="arr" aria-hidden="true">↘</span></a>
+            <span class="hero-meta">Law · Privacy · International experience</span>
+          </div>
+        </div>
+        <div class="hero-pane" aria-label="Personal monogram and professional disciplines">
+          <div class="pane-middle"><div class="large-initials" aria-hidden="true">DK</div><div class="pane-rule"></div><p class="pane-quote">Sound judgment considers both principle and consequence.</p></div>
+          <div class="pane-bottom"><span>Law &amp; privacy<br>Data governance</span><span>Risk &amp; controls<br>Business operations</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profile" id="profile" aria-labelledby="profileTitle">
+      <div class="shell">
+        <div class="section-head"><div class="section-index"><span class="slash" aria-hidden="true">/</span><span class="caps">01 &nbsp; Personal profile</span></div><div><h2 class="section-title" id="profileTitle">Between legal principle and organisational reality.</h2></div></div>
+        <div class="profile-grid">
+          <div class="profile-aside"><p>Clarity, discretion and sound judgment matter most when the questions are difficult.</p></div>
+          <div class="profile-body">
+            <p>My professional background combines legal training, data protection, corporate governance and operational experience. I have worked across legal and business functions, European organisations and the governance structures of a global financial institution.</p>
+            <p>My work in privacy and enterprise governance is informed by practical experience in corporate administration, international logistics and cost control. This background helps me consider regulatory requirements within the realities of how organisations operate.</p>
+            <p>I am particularly interested in how regulation becomes workable governance: defining accountability, assessing risk, documenting decisions and aligning legal, technology and business stakeholders. I value precise analysis, clear communication and measures proportionate to the issue at hand.</p>
+          </div>
+        </div>
+        <div class="profile-lines" aria-label="Professional background at a glance">
+          <span><strong>Legal foundation</strong>Regulatory interpretation and governance</span>
+          <span><strong>Operational perspective</strong>Cost control, process improvement and business coordination</span>
+          <span><strong>International experience</strong>Multinational operations and governance</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section expertise" id="expertise" aria-labelledby="expertiseTitle">
+      <div class="shell">
+        <div class="section-head"><div class="section-index"><span class="slash" aria-hidden="true">/</span><span class="caps">02 &nbsp; Areas of expertise</span></div><div><h2 class="section-title" id="expertiseTitle">Disciplines shaped by experience.</h2><p class="section-intro">An interdisciplinary perspective spanning legal requirements, enterprise governance, risk and practical operations.</p></div></div>
+        <div class="expertise-ledger">
+          <article class="expertise-item"><span class="expertise-num">01</span><div><h3>Privacy &amp; data protection</h3><p>GDPR, privacy impact assessments, records of processing, data subject rights and the operationalisation of privacy obligations.</p></div></article>
+          <article class="expertise-item"><span class="expertise-num">02</span><div><h3>Data governance &amp; risk</h3><p>Data ownership, lifecycle governance, policy implementation, risk assessments, controls and documented accountability.</p></div></article>
+          <article class="expertise-item"><span class="expertise-num">03</span><div><h3>Responsible AI governance</h3><p>Governance approaches to AI use, transparency, assessments, human oversight and the relationship between emerging technology and legal obligations.</p></div></article>
+          <article class="expertise-item"><span class="expertise-num">04</span><div><h3>Cross-border data practices</h3><p>International processing arrangements, transfer-related requirements and coordination among legal, risk and business stakeholders.</p></div></article>
+          <article class="expertise-item"><span class="expertise-num">05</span><div><h3>Business &amp; operational analysis</h3><p>Operational and cost analysis, process improvement, requirements and cross-functional coordination, grounded in international logistics and business experience.</p></div></article>
+          <article class="expertise-item"><span class="expertise-num">06</span><div><h3>Legal &amp; corporate governance</h3><p>Legal analysis, corporate records, governance support and the disciplined preparation of decision-making materials.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section career" id="experience" aria-labelledby="careerTitle">
+      <div class="shell">
+        <div class="section-head"><div class="section-index"><span class="slash" aria-hidden="true">/</span><span class="caps">03 &nbsp; Professional experience</span></div><div><h2 class="section-title" id="careerTitle">Experience across disciplines and institutions.</h2><p class="section-intro">Professional experience across law, international operations and enterprise governance.</p></div></div>
+        <div class="career-list">
+          <div class="career-row"><div class="career-org">Citi</div><h3 class="career-role">Data Privacy Lead Analyst</h3><p class="career-desc">Human Resources Chief Data Office. Global privacy governance, impact assessments, cross-border data practices, risk and control coordination, and cross-functional stakeholder engagement.</p></div>
+          <div class="career-row"><div class="career-org">Swiss Automotive Group</div><h3 class="career-role">Data Protection Officer</h3><p class="career-desc">Privacy compliance support for European operations, including assessments, records, policy documentation, training and operational guidance.</p></div>
+          <div class="career-row"><div class="career-org">Bertschi AG</div><h3 class="career-role">Operations &amp; Cost Control</h3><p class="career-desc">International logistics coordination, cost analysis, discrepancy investigation and business process collaboration.</p></div>
+          <div class="career-row"><div class="career-org">MOL Plc</div><h3 class="career-role">Corporate Governance</h3><p class="career-desc">Company secretarial support, corporate records and documentation for board and committee processes.</p></div>
+          <div class="career-row"><div class="career-org">National Tax and Customs Administration</div><h3 class="career-role">Legal Officer</h3><p class="career-desc">Legal analysis, regulatory matters and support for public-sector investigative and administrative processes.</p></div>
+        </div>
+        <div class="career-ending">
+          <div class="education-area">
+            <div class="caps muted">Education &amp; professional development</div>
+            <div class="education-grid">
+              <div class="education-item">
+                <h3>Law</h3>
+                <p class="education-degree">Master’s Degree in Law <span>· Completed</span></p>
+                <p class="education-copy">University of Miskolc. The legal foundation for my work in regulation, corporate governance and data protection.</p>
+              </div>
+              <div class="education-item">
+                <h3>Business Administration</h3>
+                <p class="education-degree">Master of Business Administration (MBA) <span>· In progress</span></p>
+                <p class="education-copy">Ongoing graduate study broadening my perspective on economics, finance, management and strategic decision-making.</p>
+              </div>
+              <div class="education-item">
+                <h3>Management and Leadership</h3>
+                <p class="education-degree">Master’s-level studies</p>
+                <p class="education-copy">Further academic study of management, organisational structures and leadership.</p>
+              </div>
+            </div>
+            <p class="education-notes">Further university courses and professional credentials are detailed in the continuing education section.</p>
+          </div>
+          <button id="printButton" class="text-link print-link" type="button">Print professional profile <span class="arr" aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="perspective" aria-labelledby="perspectiveTitle"><div class="shell perspective-grid"><div class="section-index perspective-index"><span class="slash" aria-hidden="true">/</span><span class="caps">04 &nbsp; Professional perspective</span></div><div><h2 id="perspectiveTitle" class="sr-only">Professional perspective</h2><p class="perspective-quote">A sound governance framework should be legally grounded, operationally clear and <em>proportionate to the risk.</em></p><p class="perspective-desc">I regard privacy, data and AI governance as connected disciplines. Legal requirements establish the framework, while sound implementation depends on clear accountability, proportionate controls and an understanding of how organisations make and execute decisions.</p></div></div></section>
+
+    <section class="section advisory" id="advisory" aria-labelledby="advisoryTitle">
+      <div class="shell">
+        <div class="section-head"><div class="section-index"><span class="slash" aria-hidden="true">/</span><span class="caps">05 &nbsp; Professional collaboration</span></div><div><h2 class="section-title" id="advisoryTitle">Areas for considered dialogue.</h2><p class="section-intro">I welcome relevant professional conversations and may consider suitable advisory collaborations where my background can be useful.</p></div></div>
+        <div class="advisory-grid">
+          <article class="advisory-item"><span class="caps">I. &nbsp; Privacy</span><h3>Privacy governance</h3><p>Assessment approaches, privacy processes, documentation, international data practices and practical regulatory implementation.</p></article>
+          <article class="advisory-item"><span class="caps">II. &nbsp; Data</span><h3>Data &amp; AI responsibility</h3><p>Governance structure, accountability, risk considerations and the responsible integration of data and emerging technologies.</p></article>
+          <article class="advisory-item"><span class="caps">III. &nbsp; Organisations</span><h3>Business &amp; operational alignment</h3><p>Structured requirements, operational and financial considerations, and collaboration across legal, risk, technology and business functions.</p></article>
+        </div>
+        <div class="advisory-foot"><p>Any external collaboration is subject to relevant employment, confidentiality, professional and independence requirements. This is a personal professional website, not the website of a law firm or an offer of regulated legal services.</p></div>
+      </div>
+    </section>
+
+
+    <section class="section development" id="development" aria-labelledby="developmentTitle">
+      <div class="shell">
+        <div class="section-head">
+          <div class="section-index"><span class="slash" aria-hidden="true">/</span><span class="caps">06 &nbsp; Further education</span></div>
+          <div><h2 class="section-title" id="developmentTitle">Continued learning.</h2><p class="section-intro">University courses and professional development across law, negotiation, financial markets, investment, technology and project delivery.</p></div>
+        </div>
+        <div class="development-ledger">
+          <div class="development-group">
+            <div class="development-category caps">University courses</div>
+            <div>
+              <div class="development-record">
+                <h3>Yale University</h3>
+                <ul>
+                  <li>The Psychology of Negotiation: How to Find Elegant Trades</li>
+                  <li>American Contract Law I</li>
+                  <li>Financial Markets</li>
+                </ul>
+              </div>
+              <div class="development-record">
+                <h3>University of Geneva</h3>
+                <ul><li>Investment Management</li></ul>
+              </div>
+              <div class="development-record">
+                <h3>Lund University</h3>
+                <ul><li>AI &amp; Law</li></ul>
+              </div>
+            </div>
+          </div>
+          <div class="development-group">
+            <div class="development-category caps">Professional credentials &amp; programmes</div>
+            <div>
+              <div class="development-record">
+                <h3>Scrum.org</h3>
+                <ul><li>Professional Scrum Master (PSM®)</li></ul>
+              </div>
+              <div class="development-record">
+                <h3>Microsoft</h3>
+                <ul><li>Business Analyst Certificate</li></ul>
+              </div>
+              <div class="development-record">
+                <h3>Google</h3>
+                <ul>
+                  <li>AI Specialization</li>
+                  <li>Project Management Specialization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="development-group">
+            <div class="development-category caps">Certification in preparation</div>
+            <div class="development-record">
+              <h3>CIPP/E</h3>
+              <div><p class="development-description">Certified Information Privacy Professional/Europe</p><span class="development-status">In preparation</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contactTitle"><div class="shell contact-grid"><div class="section-index"><span class="slash" aria-hidden="true">/</span><span class="caps">07 &nbsp; Correspondence</span></div><div><h2 id="contactTitle" class="contact-title">A professional conversation begins here.</h2><p class="contact-text">For career opportunities, professional exchange and appropriate collaborations, please get in touch through LinkedIn.</p><a class="text-link" href="https://www.linkedin.com/in/dakorsite/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dr. David Kormos on LinkedIn, opens in a new tab">Connect on LinkedIn <span class="arr" aria-hidden="true">↗</span></a><p class="contact-secondary">Messages are handled via LinkedIn. No personal information is collected by this website.</p></div></div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><div class="footer-name">Dr. David Kormos</div><div class="footer-copy">© <span id="year">2026</span> Dr. David Kormos. Personal views; not those of current or former employers.</div><a href="#top">Return to top ↑</a></div></footer>
+  <script>
+    const menuToggle=document.getElementById('menuToggle');
+    const siteNav=document.getElementById('siteNav');
+    function closeMenu(){siteNav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Open navigation');}
+    menuToggle.addEventListener('click',()=>{const isOpen=siteNav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(isOpen));menuToggle.setAttribute('aria-label',isOpen?'Close navigation':'Open navigation');});
+    siteNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+    // The header is sticky, so native #top navigation can leave the page where it is.
+    // Force an actual return to scroll position zero for both top-of-page links.
+    document.querySelectorAll('a[href="#top"]').forEach(link=>{
+      link.addEventListener('click',event=>{
+        event.preventDefault();
+        closeMenu();
+        window.scrollTo({top:0,behavior:'instant'});
+      });
+    });
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+    window.addEventListener('resize',()=>{if(window.innerWidth>860)closeMenu()});
+    document.getElementById('printButton').addEventListener('click',()=>window.print());
+    document.getElementById('year').textContent=String(new Date().getFullYear());
+  </script>
+</body>
+</html>
